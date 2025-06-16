@@ -1,7 +1,7 @@
 
 //componente é um função que retorna jsx 
 
-import { useState, type ChangeEvent } from "react"
+import { useState } from "react"
 
 //import type { Container } from "react-dom/client"
 
@@ -39,6 +39,7 @@ function Container(props:ContainerProps){
 
   </>
   )
+  
 
 }
 export default Container
