@@ -7,14 +7,48 @@ interface ProdutosState{
 
 }
 function Pagina(){
+    const [id, setId ] = useState("")
+    const [nome, setNome ] = useState("")
+    const [categoria, setCategoria ] = useState("")
+    const [preco, setPreco ] = useState("")
     const[produtos, setProdutos] = useState<ProdutosState[]>([
         {
             id:1,
             nome:"veja",
-            preco:20,
+            preco:8,
             categoria:"limpeza"
         }
     ])
+
+
+    function TrataCadastro(event: React.FormEvent<HTMLFormElement> ){
+       event.preventDefault();
+       //cria um novo produto
+       const novoProduto:ProdutosState =  {
+          id:parseInt(id),
+          nome:nome,
+          preco:parseFloat(preco),
+          categoria:categoria
+       }
+       
+
+       //Adicionar esse novo produto no vetor/Array de produtos 
+    }
+    function trataid(event:React.ChangeEvent<HTMLInputElement>){
+        setId(event.target.value)
+    }
+    function tratanome(event:React.ChangeEvent<HTMLInputElement>){
+        setNome(event.target.value)
+    }
+    function tratacategoria(event:React.ChangeEvent<HTMLInputElement>){
+        setCategoria(event.target.value)
+    }
+    function tratapreco(event:React.ChangeEvent<HTMLInputElement>){
+        setPreco(event.target.value)
+    }
+    
+
+
      return(
         <>
         <header>
@@ -41,7 +75,7 @@ function Pagina(){
 
             <div className="container-listagem"> 
                 
-                    {/*colocar chaves para virar javascripr*/}
+                    {/*colocar chaves para virar javascript*/}
                     <h2>Lista de componentes cadastrados</h2>
                 {produtos.map(produto=>{
                     return(
@@ -66,20 +100,17 @@ function Pagina(){
             </div>
             <div className="container-cadastro">
                 <h2>Cadastre suas informações</h2>
-                <label >id:</label>
-                <input type="text" name="id" id="id"/>
-
-                <label >Nome:</label>
-                <input type="text" name="nome" id="nome"/>
-
-                <label >preço:</label>
-                <input type="text" name="preco" id="preco"/>
-
-                <label >categoria:</label>
-                <input type="text" name="categoria" id="categoria"/>
-
-                <input type="submit" value="cadastrar"/>
-               
+                <form onSubmit={TrataCadastro}>
+                <label>id</label>
+                <input type="text" name="id" id="id" onChange={trataid}/>
+              
+                <input type="text" name="nome" id="nome" onChange={tratanome}/>
+                <input type="text" name="preco" id="preco" onChange={tratapreco}/>
+                <input type="text" name="categoria" id="categoria" onChange={tratacategoria}/>
+                <input type="submit" value="cadastrar" />
+                 
+                </form>
+        
 
 
             </div>
