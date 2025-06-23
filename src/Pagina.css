@@ -1,0 +1,87 @@
+body{
+     background-image: linear-gradient(to right, rgba(255, 0, 0, 0.418),rgba(255, 166, 0, 0.24),rgba(255, 255, 0, 0.479),rgba(0, 128, 0, 0.418),rgba(0, 0, 255, 0.466),rgba(76, 0, 130, 0.411),rgba(238, 130, 238, 0.473));
+     padding: 0px;
+     margin: 0px;
+}
+header{
+    background-image:linear-gradient(to right, rgb(255, 0, 0),rgb(255, 166, 0),rgba(255, 255, 0, 0.596),rgba(0, 128, 0, 0.425),rgba(0, 0, 255, 0.397),rgba(76, 0, 130, 0.267),rgba(238, 130, 238, 0.349));
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10vw;
+    align-items: center;
+    min-height: 10vh;
+
+
+}
+nav>ul{
+    list-style: none;
+    padding:0px;
+    display:  flex;
+    gap: 15px;
+
+}
+
+
+nav>ul>li>a{
+    text-decoration: none;
+    color: #0d0d0d;
+    font-weight: bold;
+}
+
+main{
+    margin-top: 15px;
+    padding:  0px 10vh;
+    display: flex;
+    
+}
+main>div{
+    flex: 1;
+}
+.container-listagem{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+ }
+.produto-container{
+    border: 1px solid #858592;
+    padding: 15px;
+    background-color
+    :rgba(255, 255, 255, 0.226);
+    box-shadow: 0px 0px 10px 3px rgb(30, 30, 30, 0.1);
+    min-height: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.container-cadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+     padding: 15px;
+    background-color
+    :rgba(255, 255, 255, 0.226);
+    box-shadow: 0px 0px 10px 3px rgb(30, 30, 30, 0.1);
+    color: #292222c2;
+    }
+    
+    form>input[type="text"]{
+        padding: 10px;
+        border: 1px solid #777676;
+        
+    }
+    
+    form>input[type="text"]:focus{
+        outline: 1px solid #c96a6a;
+    }
+    form>input[type="submit"]{
+        max-width: 150px;
+        padding: 8px;
+        background-color: #efd4e9;
+        color: rgb(66, 66, 66);
+        border:  1px solid #726f6f;
+        font-weight: bold;
+
+    }
